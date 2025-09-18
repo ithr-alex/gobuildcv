@@ -120,17 +120,19 @@ const AdditionalSectionsForm = ({ resumeData, updateResumeData }: AdditionalSect
       </div>
 
       <Tabs defaultValue="certifications" className="w-full">
-        <TabsList className="grid w-full grid-cols-3">
-          <TabsTrigger value="certifications" className="flex items-center gap-1">
-            <Award className="h-4 w-4" />
-            Certifications
+        <TabsList className="grid w-full grid-cols-1 sm:grid-cols-3 gap-1">
+          <TabsTrigger value="certifications" className="flex items-center gap-1 text-xs sm:text-sm">
+            <Award className="h-3 w-3 sm:h-4 sm:w-4" />
+            <span className="hidden sm:inline">Certifications</span>
+            <span className="sm:hidden">Certs</span>
           </TabsTrigger>
-          <TabsTrigger value="languages" className="flex items-center gap-1">
-            <Globe className="h-4 w-4" />
-            Languages
+          <TabsTrigger value="languages" className="flex items-center gap-1 text-xs sm:text-sm">
+            <Globe className="h-3 w-3 sm:h-4 sm:w-4" />
+            <span className="hidden sm:inline">Languages</span>
+            <span className="sm:hidden">Lang</span>
           </TabsTrigger>
-          <TabsTrigger value="projects" className="flex items-center gap-1">
-            <Code className="h-4 w-4" />
+          <TabsTrigger value="projects" className="flex items-center gap-1 text-xs sm:text-sm">
+            <Code className="h-3 w-3 sm:h-4 sm:w-4" />
             Projects
           </TabsTrigger>
         </TabsList>
@@ -162,7 +164,7 @@ const AdditionalSectionsForm = ({ resumeData, updateResumeData }: AdditionalSect
                     </Button>
                   </div>
                   
-                  <div className="grid md:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="input-group">
                       <Label className="text-sm">Certification Name</Label>
                       <Input
@@ -228,7 +230,7 @@ const AdditionalSectionsForm = ({ resumeData, updateResumeData }: AdditionalSect
                     </Button>
                   </div>
                   
-                  <div className="grid md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="input-group">
                       <Label className="text-sm">Language</Label>
                       <Input
@@ -293,7 +295,7 @@ const AdditionalSectionsForm = ({ resumeData, updateResumeData }: AdditionalSect
                   </div>
                   
                   <div className="space-y-4">
-                    <div className="grid md:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="input-group">
                         <Label className="text-sm">Project Name</Label>
                         <Input

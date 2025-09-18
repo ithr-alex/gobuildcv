@@ -24,7 +24,7 @@ const PersonalInfoForm = ({ resumeData, updateResumeData }: PersonalInfoFormProp
         💡 <strong>Tip:</strong> Use your full legal name as it appears on official documents. Your job title should match the role you're applying for.
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
         <div className="input-group">
           <Label htmlFor="fullName" className="text-sm font-medium">
             Full Name <span className="text-destructive">*</span>

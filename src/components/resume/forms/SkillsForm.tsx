@@ -91,7 +91,7 @@ const SkillsForm = ({ resumeData, updateResumeData }: SkillsFormProps) => {
       </div>
 
       {/* Add New Skill */}
-      <div className="flex gap-2">
+      <div className="flex flex-col sm:flex-row gap-2">
         <div className="flex-1">
           <Label htmlFor="new-skill" className="text-sm font-medium">Add Skills</Label>
           <Input
@@ -105,7 +105,7 @@ const SkillsForm = ({ resumeData, updateResumeData }: SkillsFormProps) => {
         </div>
         <Button 
           onClick={addSkill}
-          className="mt-6 bg-primary hover:bg-primary-dark"
+          className="mt-0 sm:mt-6 bg-primary hover:bg-primary-dark w-full sm:w-auto"
           disabled={!newSkill.trim()}
         >
           <Plus className="h-4 w-4" />

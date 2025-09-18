@@ -35,9 +35,9 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+    <div className="min-h-screen bg-gradient-to-br from-background to-gray-800">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b">
+      <header className="bg-card shadow-sm border-b border-border">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
@@ -54,12 +54,12 @@ const Index = () => {
       {/* Hero Section */}
       <main className="container mx-auto px-4 py-16">
         <div className="text-center max-w-4xl mx-auto mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
             Create Your Free
             <span className="block text-primary">Professional Resume</span>
           </h1>
           
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto px-4">
             Fill in your details and instantly get a recruiter-approved, ATS-friendly resume in PDF format. 
             No signup required, completely free.
           </p>
@@ -125,7 +125,7 @@ const Index = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="bg-white rounded-2xl p-8 md:p-12 shadow-lg max-w-4xl mx-auto">
+        <section className="bg-card rounded-2xl p-6 sm:p-8 md:p-12 shadow-lg max-w-4xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-foreground">
             Everything You Need to Land Your Dream Job
           </h2>
@@ -153,7 +153,7 @@ const Index = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white border-t mt-16">
+      <footer className="bg-card border-t border-border mt-16">
         <div className="container mx-auto px-4 py-8">
           <div className="text-center text-muted-foreground">
             <p>&copy; 2024 SmartResume Builder. Create professional resumes for free.</p>

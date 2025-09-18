@@ -4,19 +4,19 @@
 @tailwind components;
 @tailwind utilities;
 
-/* SmartResume Builder Design System - Professional & Modern */
+/* SmartResume Builder Design System - GoTalent Agency Style */
 
 @layer base {
   :root {
-    /* Core Brand Colors */
-    --background: 0 0% 100%;
-    --foreground: 225 15% 20%;
+    /* Core Brand Colors - Dark Theme */
+    --background: 220 26% 14%;
+    --foreground: 0 0% 100%;
     
-    /* Brand Blue Palette */
-    --primary: 217 91% 60%;
-    --primary-foreground: 0 0% 100%;
-    --primary-light: 217 91% 70%;
-    --primary-dark: 217 91% 50%;
+    /* Brand Gold/Yellow Palette */
+    --primary: 45 93% 58%;
+    --primary-foreground: 220 26% 14%;
+    --primary-light: 45 93% 68%;
+    --primary-dark: 45 93% 48%;
     
     /* Neutral Grays */
     --gray-50: 220 14% 96%;
@@ -30,18 +30,18 @@
     --gray-800: 222 84% 5%;
     --gray-900: 224 71% 4%;
 
-    /* UI Colors */
-    --card: 0 0% 100%;
-    --card-foreground: 225 15% 20%;
+    /* UI Colors - Dark Theme */
+    --card: 220 26% 18%;
+    --card-foreground: 0 0% 100%;
     
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 220 9% 32%;
+    --secondary: 220 26% 22%;
+    --secondary-foreground: 0 0% 100%;
     
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 9% 46%;
+    --muted: 220 26% 18%;
+    --muted-foreground: 220 9% 66%;
     
-    --accent: 217 91% 60%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 45 93% 58%;
+    --accent-foreground: 220 26% 14%;
     
     /* Status Colors */
     --success: 142 76% 36%;
@@ -53,11 +53,11 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     
-    /* Form Elements */
-    --border: 220 13% 91%;
-    --input: 0 0% 100%;
-    --input-border: 220 13% 83%;
-    --ring: 217 91% 60%;
+    /* Form Elements - Dark Theme */
+    --border: 220 26% 22%;
+    --input: 220 26% 18%;
+    --input-border: 220 26% 22%;
+    --ring: 45 93% 58%;
     
     /* Shadows & Effects */
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
@@ -65,9 +65,9 @@
     --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     
-    /* Gradients */
+    /* Gradients - Dark Theme */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--gray-50)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(220 26% 16%));
     
     /* Spacing & Layout */
     --radius: 0.75rem;

@@ -81,7 +81,7 @@ const EducationForm = ({ resumeData, updateResumeData }: EducationFormProps) => 
                 </Button>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="input-group">
                   <Label className="text-sm font-medium">Degree</Label>
                   <Input
@@ -147,7 +147,7 @@ const EducationForm = ({ resumeData, updateResumeData }: EducationFormProps) => 
       {/* Common Degrees Examples */}
       <div className="bg-muted/30 p-4 rounded-lg">
         <h4 className="font-medium text-sm mb-3">Common Degree Formats:</h4>
-        <div className="grid md:grid-cols-2 gap-2 text-sm text-muted-foreground">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-muted-foreground">
           <div>• Bachelor of Science in Computer Science</div>
           <div>• Master of Business Administration (MBA)</div>
           <div>• Bachelor of Arts in Marketing</div>

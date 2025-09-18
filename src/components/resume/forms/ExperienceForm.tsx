@@ -146,7 +146,7 @@ const ExperienceForm = ({ resumeData, updateResumeData }: ExperienceFormProps) =
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-4 mb-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div className="input-group">
                   <Label className="text-sm font-medium">Job Title</Label>
                   <Input
@@ -214,20 +214,20 @@ const ExperienceForm = ({ resumeData, updateResumeData }: ExperienceFormProps) =
                     </Label>
                     
                     <div className="space-y-2">
-                      {experience.achievements.map((achievement, achIndex) => (
-                        <div key={achIndex} className="flex gap-2">
+                       {experience.achievements.map((achievement, achIndex) => (
+                        <div key={achIndex} className="flex flex-col sm:flex-row gap-2">
                           <Textarea
                             value={achievement}
                             onChange={(e) => updateAchievement(experience.id, achIndex, e.target.value)}
                             placeholder="• Increased team productivity by 25% through implementation of automated testing workflows"
-                            className="resize-none"
+                            className="resize-none flex-1"
                             rows={2}
                           />
                           <Button
                             variant="ghost"
                             size="sm"
                             onClick={() => removeAchievement(experience.id, achIndex)}
-                            className="text-destructive hover:text-destructive"
+                            className="text-destructive hover:text-destructive flex-shrink-0"
                           >
                             <Trash2 className="h-4 w-4" />
                           </Button>

@@ -65,51 +65,52 @@ const ResumePreview = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-background to-gray-800">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b">
+      <header className="bg-card shadow-sm border-b border-border">
         <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              <Button 
-                variant="ghost" 
-                size="sm"
-                onClick={() => navigate('/builder')}
-                className="text-muted-foreground hover:text-foreground"
-              >
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                Back to Editor
-              </Button>
-              <div className="flex items-center space-x-2">
-                <Eye className="h-6 w-6 text-primary" />
-                <span className="text-lg font-semibold">Resume Preview</span>
+            <div className="flex flex-col sm:flex-row items-center justify-between">
+              <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4 mb-4 sm:mb-0">
+                <Button 
+                  variant="ghost" 
+                  size="sm"
+                  onClick={() => navigate('/builder')}
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  <ArrowLeft className="h-4 w-4 mr-2" />
+                  Back to Editor
+                </Button>
+                <div className="flex items-center space-x-2">
+                  <Eye className="h-6 w-6 text-primary" />
+                  <span className="text-lg font-semibold">Resume Preview</span>
+                </div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-3">
+                <Button 
+                  variant="outline"
+                  onClick={() => navigate('/builder')}
+                  className="w-full sm:w-auto"
+                >
+                  <Edit className="h-4 w-4 mr-2" />
+                  Edit Resume
+                </Button>
+                
+                <Button 
+                  onClick={handleDownloadPDF}
+                  disabled={isGeneratingPDF}
+                  className="bg-success hover:bg-success/90 w-full sm:w-auto"
+                >
+                  <Download className="h-4 w-4 mr-2" />
+                  {isGeneratingPDF ? 'Generating...' : 'Download PDF'}
+                </Button>
               </div>
             </div>
-            
-            <div className="flex items-center space-x-3">
-              <Button 
-                variant="outline"
-                onClick={() => navigate('/builder')}
-              >
-                <Edit className="h-4 w-4 mr-2" />
-                Edit Resume
-              </Button>
-              
-              <Button 
-                onClick={handleDownloadPDF}
-                disabled={isGeneratingPDF}
-                className="bg-success hover:bg-success/90"
-              >
-                <Download className="h-4 w-4 mr-2" />
-                {isGeneratingPDF ? 'Generating...' : 'Download PDF'}
-              </Button>
-            </div>
-          </div>
         </div>
       </header>
 
       <div className="container mx-auto px-4 py-8">
-        <div className="grid lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 lg:gap-8">
           {/* Sidebar - Templates & Options */}
           <div className="lg:col-span-1">
             <Card className="p-6 sticky top-8">
@@ -185,7 +186,7 @@ const ResumePreview = () => {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex justify-center mt-8 space-x-4">
+            <div className="flex flex-col sm:flex-row justify-center mt-8 space-y-4 sm:space-y-0 sm:space-x-4">
               <Button 
                 variant="outline" 
                 size="lg"
