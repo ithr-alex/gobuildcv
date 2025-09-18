@@ -42,7 +42,7 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <FileText className="h-8 w-8 text-primary" />
-              <span className="text-xl font-bold text-foreground">SmartResume</span>
+              <span className="text-xl font-bold text-foreground">GoBuildCV</span>
             </div>
             <Badge variant="secondary" className="hidden sm:block">
               100% Free Forever
@@ -104,7 +104,7 @@ const Index = () => {
         {/* Features Grid */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-center mb-12 text-foreground">
-            Why Choose SmartResume Builder?
+            Why Choose GoBuildCV Builder?
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -156,7 +156,7 @@ const Index = () => {
       <footer className="bg-card border-t border-border mt-16">
         <div className="container mx-auto px-4 py-8">
           <div className="text-center text-muted-foreground">
-            <p>&copy; 2024 SmartResume Builder. Create professional resumes for free.</p>
+            <p>&copy; 2025 GoBuildCV Builder. Create professional resumes for free.</p>
           </div>
         </div>
       </footer>
