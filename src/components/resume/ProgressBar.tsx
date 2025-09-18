@@ -60,7 +60,7 @@ const ProgressBar = ({ resumeData }: ProgressBarProps) => {
       />
       <div className="flex justify-between items-center mt-2">
         <span className="text-sm text-muted-foreground">Resume Completion</span>
-        <span className="text-sm font-small text-primary">{progress}%</span>
+        <span className="text-sm font-medium text-primary">{progress}%</span>
       </div>
     </div>
   );
