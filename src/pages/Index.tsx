@@ -147,7 +147,7 @@ const Index = () => {
       <footer className="bg-card border-t border-border mt-16">
         <div className="container mx-auto px-4 py-8">
           <div className="text-center text-muted-foreground">
-            <p>&copy; 2025 GoBuildCV Builder. Create professional resumes for free.</p>
+            <p>&copy; 2025 GoBuildCV - Free Online Resume Builder. Create professional resumes for free.</p>
           </div>
         </div>
       </footer>
