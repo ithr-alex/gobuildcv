@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: '/gobuildcv/',  // добавьте эту строку
+  base: '/builder/',  // добавьте эту строку
   server: {
     host: "::",
     port: 8080,
