@@ -44,7 +44,7 @@ const Index = () => {
               <FileText className="h-8 w-8 text-primary" />
               <span className="text-xl font-bold text-foreground">GoBuildCV</span>
               <span className="text-xs font-regular text-foreground">by</span>
-              <a href="https://GoTalent.agency" target="_blank" rel="noopener noreferrer" className="text-l font-regular text-foreground">
+              <a href="https://GoTalent.agency" target="_blank" rel="noopener noreferrer" className="text-xs font-regular text-foreground">
   GoTalent.agency
 </a>
             </div>
