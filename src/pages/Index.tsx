@@ -64,7 +64,7 @@ const Index = () => {
             No signup required, completely free.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <div className="flex justify-center mb-12">
             <Button 
               size="lg" 
               onClick={() => navigate('/builder')}
@@ -72,15 +72,6 @@ const Index = () => {
             >
               Start Building Now
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-            
-            <Button 
-              size="lg" 
-              variant="outline" 
-              onClick={() => navigate('/builder')}
-              className="text-lg px-8 py-6"
-            >
-              See Templates
             </Button>
           </div>
 
