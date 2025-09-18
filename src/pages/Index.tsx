@@ -63,7 +63,7 @@ const Index = () => {
             <span className="block text-primary">Professional Resume</span>
           </h1>
           
-          <p className="text-base sm:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto px-4">
+          <p className="text-base sm:text-base text-muted-foreground mb-8 max-w-2xl mx-auto px-4">
             Fill in your details and instantly get a recruiter-approved, ATS-friendly resume in PDF format. 
             No signup required, completely free.
           </p>
