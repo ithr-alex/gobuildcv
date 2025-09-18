@@ -43,7 +43,7 @@ const Index = () => {
             <div className="flex items-center space-x-2">
               <FileText className="h-8 w-8 text-primary" />
               <span className="text-xl font-bold text-foreground">GoBuildCV</span>
-              <span className="text-s font-small text-foreground">by</span>
+              <span className="text-sm font-regular text-foreground">by</span>
               <a href="https://GoTalent.agency" target="_blank" rel="noopener noreferrer" className="text-l font-regular text-foreground">
   GoTalent.agency
 </a>
