@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Page Not Found</title>
+  </head>
+  <body>
+    <script>
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = decodeURIComponent(l.search.slice(1));
+          history.replaceState(null, null, l.pathname + decoded + l.hash);
+        }
+      })(window.location)
+    </script>
+  </body>
+</html>
