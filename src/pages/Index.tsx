@@ -136,7 +136,7 @@ const Index = () => {
               onClick={() => navigate('/builder')}
               className="bg-primary hover:bg-primary-dark text-lg px-8 py-6"
             >
-              Start Creating Your Resume
+              Go Build CV!
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
