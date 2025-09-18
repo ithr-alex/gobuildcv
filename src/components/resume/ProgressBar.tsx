@@ -58,7 +58,7 @@ const ProgressBar = ({ resumeData }: ProgressBarProps) => {
         className="progress-fill h-3 rounded-full transition-all duration-500 ease-out"
         style={{ width: `${progress}%` }}
       />
-      <div className="flex justify-between items-center mt-2">
+      <div className="flex justify-between items-center mt-1">
         <span className="text-sm text-muted-foreground">Resume Completion</span>
         <span className="text-sm font-medium text-primary">{progress}%</span>
       </div>
