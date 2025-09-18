@@ -43,6 +43,7 @@ const Index = () => {
             <div className="flex items-center space-x-2">
               <FileText className="h-8 w-8 text-primary" />
               <span className="text-xl font-bold text-foreground">GoBuildCV</span>
+              <span className="text-l font-regular text-foreground">by</span>
             </div>
             <Badge variant="secondary" className="hidden sm:block">
               100% Free Forever
