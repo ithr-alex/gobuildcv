@@ -42,6 +42,8 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-center relative">
             <div className="flex items-center space-x-2">
+              <span className="text-xl font-bold text-foreground">GoBuildCV</span>
+              <span className="text-xs font-regular text-foreground">by</span>
               <a 
                 href="https://www.gotalent.agency/" 
                 target="_blank" 
@@ -54,11 +56,6 @@ const Index = () => {
                   className="h-16 w-auto"
                 />
               </a>
-              <span className="text-xl font-bold text-foreground">GoBuildCV</span>
-              <span className="text-xs font-regular text-foreground">by</span>
-              <a href="https://GoTalent.agency" target="_blank" rel="noopener noreferrer" className="text-xs font-regular text-foreground">
-  GoTalent.agency
-</a>
             </div>
             <Badge variant="secondary" className="hidden sm:block absolute right-0">
               100% Free Forever
