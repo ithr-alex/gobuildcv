@@ -40,7 +40,7 @@ const Index = () => {
       {/* Header */}
       <header className="bg-card shadow-sm border-b border-border">
         <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-center relative">
             <div className="flex items-center space-x-2">
               <a 
                 href="https://www.gotalent.agency/" 
@@ -60,7 +60,7 @@ const Index = () => {
   GoTalent.agency
 </a>
             </div>
-            <Badge variant="secondary" className="hidden sm:block">
+            <Badge variant="secondary" className="hidden sm:block absolute right-0">
               100% Free Forever
             </Badge>
           </div>
