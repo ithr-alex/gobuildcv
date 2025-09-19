@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowLeft, Eye, FileText } from "lucide-react";
+import { ArrowLeft, Eye } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { ResumeData, defaultResumeData } from "@/types/resume";
 import ProgressBar from "@/components/resume/ProgressBar";
@@ -12,6 +12,7 @@ import EducationForm from "@/components/resume/forms/EducationForm";
 import SkillsForm from "@/components/resume/forms/SkillsForm";
 import AdditionalSectionsForm from "@/components/resume/forms/AdditionalSectionsForm";
 import { useToast } from "@/hooks/use-toast";
+import gotalentLogo from "@/assets/gotalent-logo.png";
 
 const ResumeBuilder = () => {
   const navigate = useNavigate();
@@ -80,10 +81,18 @@ const ResumeBuilder = () => {
                 <span className="hidden xs:inline">Back to Home</span>
                 <span className="xs:hidden">Back</span>
               </Button>
-              <div className="flex items-center space-x-2 sm:ml-4">
-                <FileText className="h-6 w-6 text-primary" />
-                <span className="text-lg font-semibold">Resume Builder</span>
-              </div>
+              <a 
+                href="https://www.gotalent.agency/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 sm:ml-4 hover:opacity-80 transition-opacity"
+              >
+                <img 
+                  src={gotalentLogo} 
+                  alt="GoTalent Logo" 
+                  className="h-8 w-auto"
+                />
+              </a>
             </div>
             
             <Button 
