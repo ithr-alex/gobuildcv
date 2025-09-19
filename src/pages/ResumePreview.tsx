@@ -55,10 +55,12 @@ const ResumePreview = () => {
   const templates = [
     { id: 'modern', name: 'Modern', description: 'Clean and contemporary design' },
     { id: 'classic', name: 'Classic', description: 'Traditional professional layout' },
-    { id: 'minimal', name: 'Minimal', description: 'Simple and elegant design' }
+    { id: 'minimal', name: 'Minimal', description: 'Simple and elegant design' },
+    { id: 'creative', name: 'Creative', description: 'Bold and colorful design' },
+    { id: 'executive', name: 'Executive', description: 'Premium professional style' }
   ] as const;
 
-  const handleTemplateChange = (templateId: 'modern' | 'classic' | 'minimal') => {
+  const handleTemplateChange = (templateId: 'modern' | 'classic' | 'minimal' | 'creative' | 'executive') => {
     const updatedData = { ...resumeData, template: templateId };
     setResumeData(updatedData);
     localStorage.setItem('resumeData', JSON.stringify(updatedData));
