@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, FileText, Download, Star, ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import gotalentLogo from "@/assets/gotalent-logo.png";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -41,7 +42,18 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <FileText className="h-8 w-8 text-primary" />
+              <a 
+                href="https://www.gotalent.agency/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-opacity"
+              >
+                <img 
+                  src={gotalentLogo} 
+                  alt="GoTalent Logo" 
+                  className="h-8 w-auto"
+                />
+              </a>
               <span className="text-xl font-bold text-foreground">GoBuildCV</span>
               <span className="text-xs font-regular text-foreground">by</span>
               <a href="https://GoTalent.agency" target="_blank" rel="noopener noreferrer" className="text-xs font-regular text-foreground">
