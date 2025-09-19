@@ -51,7 +51,7 @@ const Index = () => {
                 <img 
                   src={gotalentLogo} 
                   alt="GoTalent Logo" 
-                  className="h-8 w-auto"
+                  className="h-16 w-auto"
                 />
               </a>
               <span className="text-xl font-bold text-foreground">GoBuildCV</span>
