@@ -68,8 +68,8 @@ const ResumeBuilder = () => {
       {/* Header */}
       <header className="bg-card shadow-sm border-b border-border">
         <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div className="flex items-center justify-between w-full sm:w-auto">
               <Button 
                 variant="ghost" 
                 size="sm"
@@ -77,9 +77,10 @@ const ResumeBuilder = () => {
                 className="text-muted-foreground hover:text-foreground"
               >
                 <ArrowLeft className="h-4 w-4 mr-2" />
-                Back to Home
+                <span className="hidden xs:inline">Back to Home</span>
+                <span className="xs:hidden">Back</span>
               </Button>
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2 sm:ml-4">
                 <FileText className="h-6 w-6 text-primary" />
                 <span className="text-lg font-semibold">Resume Builder</span>
               </div>
@@ -87,7 +88,7 @@ const ResumeBuilder = () => {
             
             <Button 
               onClick={handlePreview}
-              className="bg-primary hover:bg-primary-dark"
+              className="bg-primary hover:bg-primary-dark w-full sm:w-auto"
             >
               <Eye className="h-4 w-4 mr-2" />
               Preview & Download
@@ -102,7 +103,7 @@ const ResumeBuilder = () => {
           <ProgressBar resumeData={resumeData} />
 
           {/* Section Navigation */}
-          <div className="mb-8">
+          <div className="mb-8 mt-8 sm:mt-6">
             <div className="flex flex-wrap gap-2 mb-6">
               {sections.map((section, index) => (
                 <Button
