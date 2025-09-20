@@ -64,7 +64,7 @@ export interface ResumeData {
   certifications: Certification[];
   languages: Language[];
   projects: Project[];
-  template: 'modern' | 'classic' | 'minimal' | 'creative' | 'executive';
+  template: 'modern' | 'classic' | 'minimal' | 'executive';
 }
 
 export const defaultResumeData: ResumeData = {

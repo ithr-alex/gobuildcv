@@ -112,7 +112,7 @@ const ResumeBuilder = () => {
           <ProgressBar resumeData={resumeData} />
 
           {/* Section Navigation */}
-          <div className="mb-8 mt-8 sm:mt-6">
+          <div className="mb-8 mt-12 sm:mt-6">
             <div className="flex flex-wrap gap-2 mb-6">
               {sections.map((section, index) => (
                 <Button
