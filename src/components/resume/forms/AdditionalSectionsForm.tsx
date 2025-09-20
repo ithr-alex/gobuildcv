@@ -120,20 +120,21 @@ const AdditionalSectionsForm = ({ resumeData, updateResumeData }: AdditionalSect
       </div>
 
       <Tabs defaultValue="certifications" className="w-full">
-        <TabsList className="grid w-full grid-cols-1 sm:grid-cols-3 gap-1">
-          <TabsTrigger value="certifications" className="flex items-center gap-1 text-xs sm:text-sm">
+        <TabsList className="grid w-full grid-cols-3 gap-1 mb-6">
+          <TabsTrigger value="certifications" className="flex items-center gap-1 text-xs sm:text-sm px-2 py-2">
             <Award className="h-3 w-3 sm:h-4 sm:w-4" />
-            <span className="hidden sm:inline">Certifications</span>
-            <span className="sm:hidden">Certs</span>
+            <span className="hidden xs:inline">Certifications</span>
+            <span className="xs:hidden">Certs</span>
           </TabsTrigger>
-          <TabsTrigger value="languages" className="flex items-center gap-1 text-xs sm:text-sm">
+          <TabsTrigger value="languages" className="flex items-center gap-1 text-xs sm:text-sm px-2 py-2">
             <Globe className="h-3 w-3 sm:h-4 sm:w-4" />
-            <span className="hidden sm:inline">Languages</span>
-            <span className="sm:hidden">Lang</span>
+            <span className="hidden xs:inline">Languages</span>
+            <span className="xs:hidden">Lang</span>
           </TabsTrigger>
-          <TabsTrigger value="projects" className="flex items-center gap-1 text-xs sm:text-sm">
+          <TabsTrigger value="projects" className="flex items-center gap-1 text-xs sm:text-sm px-2 py-2">
             <Code className="h-3 w-3 sm:h-4 sm:w-4" />
-            Projects
+            <span className="hidden xs:inline">Projects</span>
+            <span className="xs:hidden">Proj</span>
           </TabsTrigger>
         </TabsList>
 
