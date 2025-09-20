@@ -12,7 +12,7 @@ export const generatePDF = async (resumeData: ResumeData): Promise<void> => {
 
     // Configure PDF options
     const options = {
-      margin: 0.5,
+      margin: [0.5, 0.5, 0.3, 0.5], // top, right, bottom, left - reduced bottom margin
       filename: `${resumeData.personalInfo.fullName.replace(/\s+/g, '_')}_Resume.pdf`,
       image: { 
         type: 'jpeg', 
@@ -22,13 +22,19 @@ export const generatePDF = async (resumeData: ResumeData): Promise<void> => {
         scale: 2,
         useCORS: true,
         letterRendering: true,
-        allowTaint: false
+        allowTaint: false,
+        height: null, // Let it auto-calculate height
+        width: null   // Let it auto-calculate width
       },
       jsPDF: { 
         unit: 'in', 
         format: 'a4', 
         orientation: 'portrait',
-        compress: true
+        compress: true,
+        hotfixes: ['px_scaling'] // Fix scaling issues that might cause empty pages
+      },
+      pagebreak: { 
+        mode: ['avoid-all', 'css', 'legacy']  // Better page break handling
       }
     };
 
@@ -50,7 +56,7 @@ export const generatePDFBlob = async (resumeData: ResumeData): Promise<Blob> => 
     }
 
     const options = {
-      margin: 0.5,
+      margin: [0.5, 0.5, 0.3, 0.5], // top, right, bottom, left - reduced bottom margin
       image: { 
         type: 'jpeg', 
         quality: 0.98 
@@ -58,12 +64,18 @@ export const generatePDFBlob = async (resumeData: ResumeData): Promise<Blob> => 
       html2canvas: { 
         scale: 2,
         useCORS: true,
-        letterRendering: true
+        letterRendering: true,
+        height: null, // Let it auto-calculate height
+        width: null   // Let it auto-calculate width
       },
       jsPDF: { 
         unit: 'in', 
         format: 'a4', 
-        orientation: 'portrait' 
+        orientation: 'portrait',
+        hotfixes: ['px_scaling'] // Fix scaling issues that might cause empty pages
+      },
+      pagebreak: { 
+        mode: ['avoid-all', 'css', 'legacy']  // Better page break handling
       }
     };
 

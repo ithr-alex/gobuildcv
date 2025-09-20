@@ -146,6 +146,41 @@
     @apply max-w-[8.5in] mx-auto bg-white shadow-lg;
     min-height: 11in;
     padding: 0.75in;
+    
+    /* PDF-specific styles to prevent empty pages */
+    page-break-inside: avoid;
+    page-break-after: auto;
+    orphans: 2;
+    widows: 2;
+  }
+
+  /* Print/PDF specific styles */
+  @media print {
+    .resume-page {
+      min-height: unset !important;
+      height: auto !important;
+      box-shadow: none !important;
+      margin: 0 !important;
+      page-break-after: avoid !important;
+    }
+    
+    /* Prevent empty pages */
+    body {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    
+    /* Ensure content doesn't create unnecessary page breaks */
+    * {
+      page-break-inside: avoid !important;
+    }
+    
+    /* Allow breaking inside these containers if needed */
+    .space-y-4 > *,
+    .space-y-3 > *,
+    .space-y-2 > * {
+      page-break-inside: auto !important;
+    }
   }
   
   .form-section {
