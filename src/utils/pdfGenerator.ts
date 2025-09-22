@@ -55,26 +55,27 @@ export const generatePDFBlob = async (resumeData: ResumeData): Promise<Blob> => 
     }
 
     const options = {
-      margin: [0.5, 0.5, 0.3, 0.5], // top, right, bottom, left - reduced bottom margin
+      margin: [0.5, 0.5, 0.5, 0.5], // Uniform margins all around
       image: { 
         type: 'jpeg', 
-        quality: 0.98 
+        quality: 0.95 
       },
       html2canvas: { 
-        scale: 2,
+        scale: 1.5, // Consistent with generatePDF
         useCORS: true,
         letterRendering: true,
-        height: null, // Let it auto-calculate height
-        width: null   // Let it auto-calculate width
+        allowTaint: false,
+        height: window.innerHeight,
+        width: 850 // Fixed width for consistent layout
       },
       jsPDF: { 
         unit: 'in', 
         format: 'a4', 
         orientation: 'portrait',
-        hotfixes: ['px_scaling'] // Fix scaling issues that might cause empty pages
+        compress: true
       },
       pagebreak: { 
-        mode: ['avoid-all', 'css', 'legacy']  // Better page break handling
+        mode: ['css'] // Simpler page break handling
       }
     };
 
