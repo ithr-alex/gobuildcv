@@ -144,24 +144,21 @@
   /* Resume Builder Specific Components */
   .resume-page {
     @apply max-w-[8.5in] mx-auto bg-white shadow-lg;
-    min-height: 11in;
+    /* Remove min-height to prevent forced empty space */
     padding: 0.75in;
     
     /* PDF-specific styles to prevent empty pages */
-    page-break-inside: avoid;
-    page-break-after: auto;
-    orphans: 2;
-    widows: 2;
+    height: auto;
+    box-sizing: border-box;
   }
 
   /* Print/PDF specific styles */
   @media print {
     .resume-page {
-      min-height: unset !important;
       height: auto !important;
       box-shadow: none !important;
       margin: 0 !important;
-      page-break-after: avoid !important;
+      padding: 0.5in !important;
     }
     
     /* Prevent empty pages */
@@ -170,16 +167,9 @@
       padding: 0 !important;
     }
     
-    /* Ensure content doesn't create unnecessary page breaks */
-    * {
-      page-break-inside: avoid !important;
-    }
-    
-    /* Allow breaking inside these containers if needed */
-    .space-y-4 > *,
-    .space-y-3 > *,
-    .space-y-2 > * {
-      page-break-inside: auto !important;
+    /* More lenient page break rules */
+    section {
+      break-inside: avoid-page;
     }
   }
   
