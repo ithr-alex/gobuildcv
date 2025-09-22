@@ -12,19 +12,19 @@ export const generatePDF = async (resumeData: ResumeData): Promise<void> => {
 
     // Configure PDF options
     const options = {
-      margin: [0.4, 0.4, 0.4, 0.4], // Smaller, uniform margins
+      margin: [0.5, 0.5, 0.5, 0.5], // Uniform margins
       filename: `${resumeData.personalInfo.fullName.replace(/\s+/g, '_')}_Resume.pdf`,
       image: { 
         type: 'jpeg', 
-        quality: 0.95 
+        quality: 0.98 
       },
       html2canvas: { 
-        scale: 1.5, // Reduced scale to prevent oversizing
+        scale: 2, // Higher scale for better quality
         useCORS: true,
         letterRendering: true,
         allowTaint: false,
-        height: window.innerHeight,
-        width: 850 // Fixed width to match A4 proportions
+        height: null, // Auto-calculate height
+        width: null   // Auto-calculate width for better compatibility
       },
       jsPDF: { 
         unit: 'in', 
@@ -33,7 +33,7 @@ export const generatePDF = async (resumeData: ResumeData): Promise<void> => {
         compress: true
       },
       pagebreak: { 
-        mode: ['css'] // Simpler page break handling
+        mode: ['css'] // CSS page break handling
       }
     };
 
@@ -58,15 +58,15 @@ export const generatePDFBlob = async (resumeData: ResumeData): Promise<Blob> => 
       margin: [0.5, 0.5, 0.5, 0.5], // Uniform margins all around
       image: { 
         type: 'jpeg', 
-        quality: 0.95 
+        quality: 0.98 
       },
       html2canvas: { 
-        scale: 1.5, // Consistent with generatePDF
+        scale: 2, // Higher scale for better quality
         useCORS: true,
         letterRendering: true,
         allowTaint: false,
-        height: window.innerHeight,
-        width: 850 // Fixed width for consistent layout
+        height: null, // Auto-calculate height  
+        width: null   // Auto-calculate width for better compatibility
       },
       jsPDF: { 
         unit: 'in', 
@@ -75,7 +75,7 @@ export const generatePDFBlob = async (resumeData: ResumeData): Promise<Blob> => 
         compress: true
       },
       pagebreak: { 
-        mode: ['css'] // Simpler page break handling
+        mode: ['css'] // CSS page break handling
       }
     };
 
